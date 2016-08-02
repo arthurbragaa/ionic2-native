@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Camera</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <button (click)="takePhoto()"><ion-icon name="camera"></ion-icon>Foto</button>
+  <img src="{{ image }}" [hidden]="!image">
+
+</ion-content>

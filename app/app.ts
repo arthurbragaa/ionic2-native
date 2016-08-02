@@ -2,6 +2,8 @@ import {Component} from '@angular/core';
 import {Platform, ionicBootstrap, MenuController} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HomePage} from './pages/home/home';
+import {CameraTestPage} from './pages/camera-test/camera-test';
+import {NetworkTestPage} from './pages/network-test/network-test';
 
 
 @Component({
@@ -10,12 +12,14 @@ import {HomePage} from './pages/home/home';
 export class MyApp {
 
   pages: Array<any>;
-  rootPage: any = HomePage;
+  rootPage: any = NetworkTestPage;
 
   constructor(platform: Platform, public menu: MenuController) {
 
     this.pages = [
-      {title: 'Home', component: HomePage}
+      {title: 'Home', component: HomePage},
+      {title: 'Camera', component: CameraTestPage},
+      {title: 'Network', component: NetworkTestPage}
     ];
 
 
